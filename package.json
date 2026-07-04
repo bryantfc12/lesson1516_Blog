@@ -1,0 +1,15 @@
+{
+  "name" : "lesson1516-blog",
+  "version" : "1.0.0",
+  "type" : "module",
+  "main" : "server.js",
+  "scripts": {
+    "start": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-handlebars": "^9.0.1",
+    "express-session": "^1.19.0",
+    "mongoose": "^9.7.3"
+  }
+}
