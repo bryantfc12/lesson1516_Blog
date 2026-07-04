@@ -31,6 +31,13 @@ app.get("/about", (req,res)=>{
     })
 })
 
+app.get("/author", (req,res)=>{
+    res.render('author', {
+        title : "Author",
+        message : "This is my hobby!!!!"
+    })
+})
+
 const port = 3006
 app.listen(port, ()=>{
     console.log(`Server running on localhost:${port}`)
