@@ -16,3 +16,4 @@ git remote add origin <your_repository_link_on_github>
 ```
 4. try to add, commit, push
 ```shell
+git add .
