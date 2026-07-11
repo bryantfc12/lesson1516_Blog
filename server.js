@@ -2,8 +2,11 @@ import express from 'express'
 import {engine} from 'express-handlebars'
 import session from 'express-session'
 import { trusted } from 'mongoose'
+import dotenv from 'dotenv'
+dotenv.config()
+import './db.js'
 
-
+import UserRoutes from './routes/UserRoutes.js'
 const app = express()
 
 app.engine('handlebars', engine())
@@ -38,7 +41,8 @@ app.get("/author", (req,res)=>{
     })
 })
 
-const port = 3006
+app.use("/user", UserRoutes)
+const port = process.env.PORT
 app.listen(port, ()=>{
     console.log(`Server running on localhost:${port}`)
 })
